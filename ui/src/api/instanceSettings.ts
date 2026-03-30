@@ -3,7 +3,7 @@ import type {
   InstanceGeneralSettings,
   PatchInstanceGeneralSettings,
   PatchInstanceExperimentalSettings,
-} from "@paperclipai/shared";
+} from "@sirius-eco-system/shared";
 import { api } from "./client";
 
 export const instanceSettingsApi = {

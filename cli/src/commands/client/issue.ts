@@ -6,7 +6,7 @@ import {
   updateIssueSchema,
   type Issue,
   type IssueComment,
-} from "@paperclipai/shared";
+} from "@sirius-eco-system/shared";
 import {
   addCommonClientOptions,
   formatInlineRecord,

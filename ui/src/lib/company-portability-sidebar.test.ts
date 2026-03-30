@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { Agent, Project } from "@paperclipai/shared";
+import type { Agent, Project } from "@sirius-eco-system/shared";
 import {
   buildPortableAgentSlugMap,
   buildPortableProjectSlugMap,

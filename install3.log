@@ -1,0 +1,11 @@
+﻿Scope: all 20 workspace projects
+Progress: resolved 0, reused 1, downloaded 0, added 0
+server                                   | ΓÇëWARNΓÇë deprecated @types/sharp@0.32.0
+C:\Users\opcha\Downloads\New\paperclip\server:
+ΓÇëERR_PNPM_FETCH_404ΓÇë GET https://registry.npmjs.org/HERMES_SIRIUSLY_ADAPTER_TEMP: Not Found - 404
+
+This error happened while installing a direct dependency of C:\Users\opcha\Downloads\New\paperclip\server
+
+HERMES_SIRIUSLY_ADAPTER_TEMP is not in the npm registry, or you have no permission to fetch it.
+
+No authorization header was set for the request.

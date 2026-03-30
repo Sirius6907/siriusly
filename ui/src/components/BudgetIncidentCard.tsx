@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { BudgetIncident } from "@paperclipai/shared";
+import type { BudgetIncident } from "@sirius-eco-system/shared";
 import { AlertOctagon, ArrowUpRight, PauseCircle } from "lucide-react";
 import { formatCents } from "../lib/utils";
 import { Button } from "@/components/ui/button";

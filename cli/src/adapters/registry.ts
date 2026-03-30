@@ -1,11 +1,12 @@
-import type { CLIAdapterModule } from "@paperclipai/adapter-utils";
-import { printClaudeStreamEvent } from "@paperclipai/adapter-claude-local/cli";
-import { printCodexStreamEvent } from "@paperclipai/adapter-codex-local/cli";
-import { printCursorStreamEvent } from "@paperclipai/adapter-cursor-local/cli";
-import { printGeminiStreamEvent } from "@paperclipai/adapter-gemini-local/cli";
-import { printOpenCodeStreamEvent } from "@paperclipai/adapter-opencode-local/cli";
-import { printPiStreamEvent } from "@paperclipai/adapter-pi-local/cli";
-import { printOpenClawGatewayStreamEvent } from "@paperclipai/adapter-openclaw-gateway/cli";
+import type { CLIAdapterModule } from "@sirius-eco-system/adapter-utils";
+import { printClaudeStreamEvent } from "@sirius-eco-system/adapter-claude-local/cli";
+import { printCodexStreamEvent } from "@sirius-eco-system/adapter-codex-local/cli";
+import { printCursorStreamEvent } from "@sirius-eco-system/adapter-cursor-local/cli";
+import { printGeminiStreamEvent } from "@sirius-eco-system/adapter-gemini-local/cli";
+import { printOpenCodeStreamEvent } from "@sirius-eco-system/adapter-opencode-local/cli";
+import { printPiStreamEvent } from "@sirius-eco-system/adapter-pi-local/cli";
+import { printOpenClawGatewayStreamEvent } from "@sirius-eco-system/adapter-openclaw-gateway/cli";
+import { printAwsOpenClawStreamEvent } from "@sirius-eco-system/adapter-aws-openclaw/cli";
 import { processCLIAdapter } from "./process/index.js";
 import { httpCLIAdapter } from "./http/index.js";
 
@@ -44,6 +45,11 @@ const openclawGatewayCLIAdapter: CLIAdapterModule = {
   formatStdoutEvent: printOpenClawGatewayStreamEvent,
 };
 
+const awsOpenClawCLIAdapter: CLIAdapterModule = {
+  type: "aws_openclaw",
+  formatStdoutEvent: printAwsOpenClawStreamEvent,
+};
+
 const adaptersByType = new Map<string, CLIAdapterModule>(
   [
     claudeLocalCLIAdapter,
@@ -53,6 +59,7 @@ const adaptersByType = new Map<string, CLIAdapterModule>(
     cursorLocalCLIAdapter,
     geminiLocalCLIAdapter,
     openclawGatewayCLIAdapter,
+    awsOpenClawCLIAdapter,
     processCLIAdapter,
     httpCLIAdapter,
   ].map((a) => [a.type, a]),

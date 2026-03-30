@@ -1,6 +1,6 @@
 .git
 .github
-.paperclip
+.sirius-eco-system
 .pnpm-store
 node_modules
 **/node_modules

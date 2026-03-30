@@ -26,14 +26,14 @@ function parseNumber(value: string | undefined, fallback: number) {
 }
 
 function jwtConfig() {
-  const secret = process.env.PAPERCLIP_AGENT_JWT_SECRET;
+  const secret = process.env.SIRIUSLY_AGENT_JWT_SECRET;
   if (!secret) return null;
 
   return {
     secret,
-    ttlSeconds: parseNumber(process.env.PAPERCLIP_AGENT_JWT_TTL_SECONDS, 60 * 60 * 48),
-    issuer: process.env.PAPERCLIP_AGENT_JWT_ISSUER ?? "paperclip",
-    audience: process.env.PAPERCLIP_AGENT_JWT_AUDIENCE ?? "paperclip-api",
+    ttlSeconds: parseNumber(process.env.SIRIUSLY_AGENT_JWT_TTL_SECONDS, 60 * 60 * 48),
+    issuer: process.env.SIRIUSLY_AGENT_JWT_ISSUER ?? "siriusEcoSystem",
+    audience: process.env.SIRIUSLY_AGENT_JWT_AUDIENCE ?? "sirius-eco-system-api",
   };
 }
 

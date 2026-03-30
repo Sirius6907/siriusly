@@ -1,4 +1,4 @@
-# @paperclipai/adapter-utils
+# @sirius-eco-system/adapter-utils
 
 ## 0.3.1
 

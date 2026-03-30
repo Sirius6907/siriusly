@@ -11,8 +11,8 @@ import type {
   HeartbeatRun,
   Approval,
   AgentConfigRevision,
-} from "@paperclipai/shared";
-import { isUuidLike, normalizeAgentUrlKey } from "@paperclipai/shared";
+} from "@sirius-eco-system/shared";
+import { isUuidLike, normalizeAgentUrlKey } from "@sirius-eco-system/shared";
 import { ApiError, api } from "./client";
 
 export interface AgentKey {
@@ -199,5 +199,5 @@ export const agentsApi = {
 export interface AvailableSkill {
   name: string;
   description: string;
-  isPaperclipManaged: boolean;
+  isSiriusEcoSystemManaged: boolean;
 }

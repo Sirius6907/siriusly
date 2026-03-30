@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, useCallback, useMemo } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import type { AdapterEnvironmentTestResult } from "@paperclipai/shared";
+import type { AdapterEnvironmentTestResult } from "@sirius-eco-system/shared";
 import { useLocation, useNavigate, useParams } from "@/lib/router";
 import { useDialog } from "../context/DialogContext";
 import { useCompany } from "../context/CompanyContext";
@@ -33,11 +33,11 @@ import {
 import {
   DEFAULT_CODEX_LOCAL_BYPASS_APPROVALS_AND_SANDBOX,
   DEFAULT_CODEX_LOCAL_MODEL
-} from "@paperclipai/adapter-codex-local";
-import { DEFAULT_CURSOR_LOCAL_MODEL } from "@paperclipai/adapter-cursor-local";
-import { DEFAULT_GEMINI_LOCAL_MODEL } from "@paperclipai/adapter-gemini-local";
+} from "@sirius-eco-system/adapter-codex-local";
+import { DEFAULT_CURSOR_LOCAL_MODEL } from "@sirius-eco-system/adapter-cursor-local";
+import { DEFAULT_GEMINI_LOCAL_MODEL } from "@sirius-eco-system/adapter-gemini-local";
 import { resolveRouteOnboardingOptions } from "../lib/onboarding-route";
-import { AsciiArtAnimation } from "./AsciiArtAnimation";
+import { OnboardingLogo } from "./OnboardingLogo";
 import { OpenCodeLogoIcon } from "./OpenCodeLogoIcon";
 import {
   Building2,
@@ -861,6 +861,12 @@ export function OnboardingWizard() {
                             desc: "Invoke OpenClaw via gateway protocol",
                             comingSoon: true,
                             disabledLabel: "Configure OpenClaw within the App"
+                          },
+                          {
+                            value: "http" as const,
+                            label: "HTTP Webhook",
+                            icon: Sparkles,
+                            desc: "Send task payload to any HTTP endpoint",
                           }
                         ].map((opt) => (
                           <button
@@ -1336,11 +1342,11 @@ export function OnboardingWizard() {
           {/* Right half — ASCII art (hidden on mobile) */}
           <div
             className={cn(
-              "hidden md:block overflow-hidden bg-[#1d1d1d] transition-[width,opacity] duration-500 ease-in-out",
+              "hidden md:block overflow-hidden bg-black transition-[width,opacity] duration-500 ease-in-out border-l border-border/10",
               step === 1 ? "w-1/2 opacity-100" : "w-0 opacity-0"
             )}
           >
-            <AsciiArtAnimation />
+            <OnboardingLogo />
           </div>
         </div>
       </DialogPortal>

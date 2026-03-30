@@ -1,0 +1,10 @@
+﻿
+> @sirius-eco-system/ui@0.3.1 typecheck C:\Users\opcha\Downloads\New\paperclip\ui
+> tsc -b
+
+src/components/CommentThread.tsx(5,23): error TS2305: Module '"lucide-react"' has no exported member 'SiriusEcoSystem'.
+src/components/CompanyRail.tsx(2,10): error TS2305: Module '"lucide-react"' has no exported member 'SiriusEcoSystem'.
+src/components/NewIssueDialog.tsx(45,3): error TS2305: Module '"lucide-react"' has no exported member 'SiriusEcoSystem'.
+src/pages/CompanySkills.tsx(49,3): error TS2305: Module '"lucide-react"' has no exported member 'SiriusEcoSystem'.
+src/pages/IssueDetail.tsx(52,3): error TS2305: Module '"lucide-react"' has no exported member 'SiriusEcoSystem'.
+ΓÇëELIFECYCLEΓÇë Command failed with exit code 1.

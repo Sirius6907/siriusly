@@ -11,7 +11,7 @@ import { EmptyState } from "../components/EmptyState";
 import { PageSkeleton } from "../components/PageSkeleton";
 import { AgentIcon } from "../components/AgentIconPicker";
 import { Download, Network, Upload } from "lucide-react";
-import { AGENT_ROLE_LABELS, type Agent } from "@paperclipai/shared";
+import { AGENT_ROLE_LABELS, type Agent } from "@sirius-eco-system/shared";
 
 // Layout constants
 const CARD_W = 200;
@@ -121,6 +121,7 @@ const adapterLabels: Record<string, string> = {
   codex_local: "Codex",
   gemini_local: "Gemini",
   opencode_local: "OpenCode",
+  aws_openclaw: "AWS OpenClaw (EC2)",
   cursor: "Cursor",
   hermes_local: "Hermes",
   openclaw_gateway: "OpenClaw Gateway",

@@ -1,4 +1,4 @@
-# @paperclipai/shared
+# @sirius-eco-system/shared
 
 ## 0.3.1
 

@@ -26,4 +26,4 @@ export type {
   ResolvedSessionCompactionPolicy,
   SessionCompactionPolicy,
   ServerAdapterModule,
-} from "@paperclipai/adapter-utils";
+} from "@sirius-eco-system/adapter-utils";

@@ -5,32 +5,32 @@ summary: Onboard, run, doctor, and configure
 
 Instance setup and diagnostics commands.
 
-## `paperclipai run`
+## `sirius-eco-system run`
 
 One-command bootstrap and start:
 
 ```sh
-pnpm paperclipai run
+pnpm sirius-eco-system run
 ```
 
 Does:
 
 1. Auto-onboards if config is missing
-2. Runs `paperclipai doctor` with repair enabled
+2. Runs `sirius-eco-system doctor` with repair enabled
 3. Starts the server when checks pass
 
 Choose a specific instance:
 
 ```sh
-pnpm paperclipai run --instance dev
+pnpm sirius-eco-system run --instance dev
 ```
 
-## `paperclipai onboard`
+## `sirius-eco-system onboard`
 
 Interactive first-time setup:
 
 ```sh
-pnpm paperclipai onboard
+pnpm sirius-eco-system onboard
 ```
 
 First prompt:
@@ -41,22 +41,22 @@ First prompt:
 Start immediately after onboarding:
 
 ```sh
-pnpm paperclipai onboard --run
+pnpm sirius-eco-system onboard --run
 ```
 
 Non-interactive defaults + immediate start (opens browser on server listen):
 
 ```sh
-pnpm paperclipai onboard --yes
+pnpm sirius-eco-system onboard --yes
 ```
 
-## `paperclipai doctor`
+## `sirius-eco-system doctor`
 
 Health checks with optional auto-repair:
 
 ```sh
-pnpm paperclipai doctor
-pnpm paperclipai doctor --repair
+pnpm sirius-eco-system doctor
+pnpm sirius-eco-system doctor --repair
 ```
 
 Validates:
@@ -67,51 +67,51 @@ Validates:
 - Storage configuration
 - Missing key files
 
-## `paperclipai configure`
+## `sirius-eco-system configure`
 
 Update configuration sections:
 
 ```sh
-pnpm paperclipai configure --section server
-pnpm paperclipai configure --section secrets
-pnpm paperclipai configure --section storage
+pnpm sirius-eco-system configure --section server
+pnpm sirius-eco-system configure --section secrets
+pnpm sirius-eco-system configure --section storage
 ```
 
-## `paperclipai env`
+## `sirius-eco-system env`
 
 Show resolved environment configuration:
 
 ```sh
-pnpm paperclipai env
+pnpm sirius-eco-system env
 ```
 
-## `paperclipai allowed-hostname`
+## `sirius-eco-system allowed-hostname`
 
 Allow a private hostname for authenticated/private mode:
 
 ```sh
-pnpm paperclipai allowed-hostname my-tailscale-host
+pnpm sirius-eco-system allowed-hostname my-tailscale-host
 ```
 
 ## Local Storage Paths
 
 | Data | Default Path |
 |------|-------------|
-| Config | `~/.paperclip/instances/default/config.json` |
-| Database | `~/.paperclip/instances/default/db` |
-| Logs | `~/.paperclip/instances/default/logs` |
-| Storage | `~/.paperclip/instances/default/data/storage` |
-| Secrets key | `~/.paperclip/instances/default/secrets/master.key` |
+| Config | `~/.sirius-eco-system/instances/default/config.json` |
+| Database | `~/.sirius-eco-system/instances/default/db` |
+| Logs | `~/.sirius-eco-system/instances/default/logs` |
+| Storage | `~/.sirius-eco-system/instances/default/data/storage` |
+| Secrets key | `~/.sirius-eco-system/instances/default/secrets/master.key` |
 
 Override with:
 
 ```sh
-PAPERCLIP_HOME=/custom/home PAPERCLIP_INSTANCE_ID=dev pnpm paperclipai run
+SIRIUSLY_HOME=/custom/home SIRIUSLY_INSTANCE_ID=dev pnpm sirius-eco-system run
 ```
 
 Or pass `--data-dir` directly on any command:
 
 ```sh
-pnpm paperclipai run --data-dir ./tmp/paperclip-dev
-pnpm paperclipai doctor --data-dir ./tmp/paperclip-dev
+pnpm sirius-eco-system run --data-dir ./tmp/sirius-eco-system-dev
+pnpm sirius-eco-system doctor --data-dir ./tmp/sirius-eco-system-dev
 ```

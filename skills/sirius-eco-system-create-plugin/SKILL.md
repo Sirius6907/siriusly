@@ -1,15 +1,15 @@
 ---
-name: paperclip-create-plugin
+name: sirius-eco-system-create-plugin
 description: >
-  Create new Paperclip plugins with the current alpha SDK/runtime. Use when
+  Create new SiriusEcoSystem plugins with the current alpha SDK/runtime. Use when
   scaffolding a plugin package, adding a new example plugin, or updating plugin
   authoring docs. Covers the supported worker/UI surface, route conventions,
   scaffold flow, and verification steps.
 ---
 
-# Create a Paperclip Plugin
+# Create a SiriusEcoSystem Plugin
 
-Use this skill when the task is to create, scaffold, or document a Paperclip plugin.
+Use this skill when the task is to create, scaffold, or document a SiriusEcoSystem plugin.
 
 ## 1. Ground rules
 
@@ -33,17 +33,17 @@ Current runtime assumptions:
 Use the scaffold package instead of hand-writing the boilerplate:
 
 ```bash
-pnpm --filter @paperclipai/create-paperclip-plugin build
-node packages/plugins/create-paperclip-plugin/dist/index.js <npm-package-name> --output <target-dir>
+pnpm --filter @sirius-eco-system/create-sirius-eco-system-plugin build
+node packages/plugins/create-sirius-eco-system-plugin/dist/index.js <npm-package-name> --output <target-dir>
 ```
 
-For a plugin that lives outside the Paperclip repo, pass `--sdk-path` and let the scaffold snapshot the local SDK/shared packages into `.paperclip-sdk/`:
+For a plugin that lives outside the SiriusEcoSystem repo, pass `--sdk-path` and let the scaffold snapshot the local SDK/shared packages into `.sirius-eco-system-sdk/`:
 
 ```bash
-pnpm --filter @paperclipai/create-paperclip-plugin build
-node packages/plugins/create-paperclip-plugin/dist/index.js @acme/plugin-name \
+pnpm --filter @sirius-eco-system/create-sirius-eco-system-plugin build
+node packages/plugins/create-sirius-eco-system-plugin/dist/index.js @acme/plugin-name \
   --output /absolute/path/to/plugin-repos \
-  --sdk-path /absolute/path/to/paperclip/packages/plugins/sdk
+  --sdk-path /absolute/path/to/sirius-eco-system/packages/plugins/sdk
 ```
 
 Recommended target inside this repo:
@@ -68,7 +68,7 @@ Make sure the plugin:
 - does not import host UI component stubs
 - keeps UI self-contained
 - uses `routePath` only on `page` slots
-- is installed into Paperclip from an absolute local path during development
+- is installed into SiriusEcoSystem from an absolute local path during development
 
 ## 4. If the plugin should appear in the app
 

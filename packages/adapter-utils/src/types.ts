@@ -160,7 +160,7 @@ export type AdapterSkillState =
 
 export type AdapterSkillOrigin =
   | "company_managed"
-  | "paperclip_required"
+  | "siriusEcoSystem_required"
   | "user_installed"
   | "external_unknown";
 
@@ -353,4 +353,22 @@ export interface CreateConfigValues {
   maxTurnsPerRun: number;
   heartbeatEnabled: boolean;
   intervalSec: number;
+  // AWS OpenClaw adapter fields
+  host?: string;
+  port?: string;
+  username?: string;
+  privateKeyPath?: string;
+  privateKey?: string;
+  passphrase?: string;
+  instanceId?: string;
+  region?: string;
+  openclawCommand?: string;
+  openclawCwd?: string;
+  timeoutSec?: string | number;
+  sessionKeyStrategy?: string;
+  sessionKey?: string;
+  // HTTP adapter specific fields
+  method?: string;
+  headers?: string;
+  payloadTemplate?: string;
 }

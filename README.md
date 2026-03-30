@@ -12,6 +12,8 @@
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Sirius6907/siriusly/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
+**[🎬 Watch the Cinematic SIRIUSLY Demo](https://siriusly-control.netlify.app/ad.html)**
+
 [Quickstart](#quickstart) · [Architecture](#architecture) · [Sirius Hub](#sirius-hub) · [API](#api-reference) · [Adapters](#adapter-engine) · [FAQ](#faq)
 
 ## If OpenClaw is an employee, SIRIUSLY is the company.
@@ -307,7 +309,7 @@ The system acts as a financial regulator. On every single lifecycle completion s
 SIRIUSLY thrives on immense extensibility. You can discover custom UI rendering widgets, unique adapter integrations for obscure local LLMs (like Ollama or vLLM), and fully fleshed out, immediately deployable Sirius Hub Blueprints constructed by our active community base. 
 
 Find plugins, operational adapters, and enterprise blueprints at the officially maintained repository:
-**[awesome-siriusly](https://github.com/Sirius6907/awesome-siriusly)**
+**[siriusly-awesome](https://github.com/Sirius6907/siriusly-awesome)**
 
 ---
 

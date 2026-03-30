@@ -34,6 +34,7 @@ const CONFIG_REVISION_FIELDS = [
   "adapterType",
   "adapterConfig",
   "runtimeConfig",
+  "contextMode",
   "budgetMonthlyCents",
   "metadata",
 ] as const;
@@ -94,6 +95,7 @@ function buildConfigSnapshot(
     adapterType: row.adapterType,
     adapterConfig,
     runtimeConfig,
+    contextMode: row.contextMode as any,
     budgetMonthlyCents: row.budgetMonthlyCents,
     metadata,
   };
@@ -146,6 +148,7 @@ function configPatchFromSnapshot(snapshot: unknown): Partial<typeof agents.$infe
     adapterType: snapshot.adapterType,
     adapterConfig: isPlainRecord(snapshot.adapterConfig) ? snapshot.adapterConfig : {},
     runtimeConfig: isPlainRecord(snapshot.runtimeConfig) ? snapshot.runtimeConfig : {},
+    contextMode: (snapshot.contextMode === "fat" ? "fat" : "thin") as any,
     budgetMonthlyCents: Math.max(0, Math.floor(snapshot.budgetMonthlyCents)),
     metadata: isPlainRecord(snapshot.metadata) || snapshot.metadata === null ? snapshot.metadata : null,
   };

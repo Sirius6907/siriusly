@@ -18,9 +18,9 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "clean": "rm -rf dist tsconfig.tsbuildinfo",
-    "prepack": "rm -f package.dev.json && cp package.json package.dev.json && node ../scripts/generate-ui-package-json.mjs",
-    "postpack": "if [ -f package.dev.json ]; then mv package.dev.json package.json; fi"
+    "clean": "node -e \"import fs from 'node:fs'; fs.rmSync('dist', { recursive: true, force: true }); fs.rmSync('tsconfig.tsbuildinfo', { force: true })\"",
+    "prepack": "node -e \"import fs from 'node:fs'; try { fs.rmSync('package.dev.json', { force: true }); fs.copyFileSync('package.json', 'package.dev.json'); } catch (e) {}\" && node ../scripts/generate-ui-package-json.mjs",
+    "postpack": "node -e \"import fs from 'node:fs'; if (fs.existsSync('package.dev.json')) fs.renameSync('package.dev.json', 'package.json')\""
   },
   "publishConfig": {
     "access": "public"

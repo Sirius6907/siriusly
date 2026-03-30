@@ -31,8 +31,8 @@
   },
   "scripts": {
     "dev": "tsx src/index.ts",
-    "build": "node --input-type=module -e \"import esbuild from 'esbuild'; import config from './esbuild.config.mjs'; await esbuild.build(config);\" && chmod +x dist/index.js",
-    "clean": "rm -rf dist",
+    "build": "node --input-type=module -e \"import esbuild from 'esbuild'; import config from './esbuild.config.mjs'; await esbuild.build(config);\" && node -e \"import { execSync } from 'node:child_process'; try { if (process.platform !== 'win32') execSync('chmod +x dist/index.js'); } catch (e) {}\"",
+    "clean": "node -e \"import fs from 'node:fs'; fs.rmSync('dist', { recursive: true, force: true })\"",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

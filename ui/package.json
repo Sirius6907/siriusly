@@ -1,15 +1,15 @@
 {
-  "name": "@sirius-eco-system/ui",
-  "version": "0.3.1",
-  "description": "Prebuilt SiriusEcoSystem board UI assets.",
+  "name": "@siriusly/ui",
+  "version": "1.0.0",
+  "description": "SIRIUSLY Command Center - Premium Operator Dashboard",
   "license": "MIT",
-  "homepage": "https://github.com/sirius-eco-system/sirius-eco-system",
+  "homepage": "https://github.com/Sirius6907/siriusly",
   "bugs": {
-    "url": "https://github.com/sirius-eco-system/sirius-eco-system/issues"
+    "url": "https://github.com/Sirius6907/siriusly/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sirius-eco-system/sirius-eco-system",
+    "url": "https://github.com/Sirius6907/siriusly",
     "directory": "ui"
   },
   "type": "module",

@@ -1,14 +1,15 @@
 {
-  "name": "@sirius-eco-system/server",
-  "version": "0.3.1",
+  "name": "@siriusly/server",
+  "version": "1.0.0",
   "license": "MIT",
-  "homepage": "https://github.com/sirius-eco-system/sirius-eco-system",
+  "homepage": "https://github.com/Sirius6907/siriusly",
+  "description": "SIRIUSLY Control Plane - Zero-Human Autonomous Orchestration",
   "bugs": {
-    "url": "https://github.com/sirius-eco-system/sirius-eco-system/issues"
+    "url": "https://github.com/Sirius6907/siriusly/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sirius-eco-system/sirius-eco-system",
+    "url": "https://github.com/Sirius6907/siriusly",
     "directory": "server"
   },
   "type": "module",

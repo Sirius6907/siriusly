@@ -1,0 +1,18 @@
+[build]
+  command = "pnpm run build"
+  publish = "ui/dist"
+  base = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_FLAGS = "--shamefully-hoist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[dev]
+  command = "pnpm run dev"
+  port = 3100
+  targetPort = 5173

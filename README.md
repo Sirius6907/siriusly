@@ -12,7 +12,11 @@
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Sirius6907/siriusly/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
-**[🎬 Watch the Cinematic SIRIUSLY Demo](https://siriusly-control.netlify.app/ad.html)**
+**[🎬 Watch the Cinematic demo](ui/public/ad.html)** (Run locally or deploy to Netlify)
+
+> [!NOTE]
+> The link below is a placeholder. To get your own live URL, follow the [Deployment](#deployment) section.
+> **[Live Demo](https://siriusly-control.netlify.app/ad.html)**
 
 [Quickstart](#quickstart) · [Architecture](#architecture) · [Sirius Hub](#sirius-hub) · [API](#api-reference) · [Adapters](#adapter-engine) · [FAQ](#faq)
 
@@ -328,6 +332,28 @@ If you are building the future of autonomous, decentralized capital, join us. We
 ## 🤝 Contributing to SIRIUSLY
 
 Please read our [Contributing Guidelines](./CONTRIBUTING.md) to deeply understand our pull-request mechanics, Git branching flow, and architectural philosophies. Review the `doc/SPEC-implementation.md` mapping carefully. Every line of code merged helps push us exponentially toward true operational autonomy.
+
+---
+
+## 🚀 Deployment
+
+### Dashboard & Cinematic Ad (Netlify)
+
+The easiest way to deploy the SIRIUSLY UI is via **Netlify**. I have provided a `ui/netlify.toml` for automated configuration.
+
+1.  **Connect Repo**: Link your GitHub repository to a new Netlify site.
+2.  **Base Directory**: Set to `ui`.
+3.  **Build Command**: `npm run build`.
+4.  **Publish Directory**: `ui/dist`.
+5.  **Environment Variables**: Ensure `VITE_API_URL` points to your backend.
+
+### Backend Orchestrator (Self-Hosted)
+
+SIRIUSLY requires a Node.js runtime and a PostgreSQL-compatible database (like PGlite for local or AWS RDS for production).
+
+1.  **Clone**: `git clone https://github.com/Sirius6907/siriusly.git`.
+2.  **Install**: `pnpm install`.
+3.  **Start**: `pnpm dev` (Local) or `npm start` (Production).
 
 ---
 

@@ -283,6 +283,7 @@ export function NewAgent() {
         {/* Shared config form */}
         <AgentConfigForm
           mode="create"
+          companyId={selectedCompanyId ?? undefined}
           values={configValues}
           onChange={(patch) => setConfigValues((prev) => ({ ...prev, ...patch }))}
           adapterModels={adapterModels}
@@ -351,3 +352,4 @@ export function NewAgent() {
     </div>
   );
 }
+

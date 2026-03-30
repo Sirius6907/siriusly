@@ -59,6 +59,8 @@ export interface AgentChainOfCommandEntry {
   title: string | null;
 }
 
+export type AgentContextMode = "thin" | "fat";
+
 export interface Agent {
   id: string;
   companyId: string;
@@ -73,6 +75,7 @@ export interface Agent {
   adapterType: AgentAdapterType;
   adapterConfig: Record<string, unknown>;
   runtimeConfig: Record<string, unknown>;
+  contextMode: AgentContextMode;
   budgetMonthlyCents: number;
   spentMonthlyCents: number;
   pauseReason: PauseReason | null;

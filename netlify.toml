@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm run build"
+  command = "pnpm -r build --filter @siriusly/ui..."
   publish = "ui/dist"
   base = "."
 
